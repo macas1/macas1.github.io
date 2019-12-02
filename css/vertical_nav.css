@@ -1,0 +1,96 @@
+:root{
+    --bg-color:lightgreen;
+    --nav-color:pink;
+    --nav-color-hover:#ccc;
+    --nav-color-selected:#add8e6;
+    --nav-color-selected-hover:#c7b5b5;
+
+    --textbox-color:#ace3ac;
+    --textbox-color:#d1edd1;
+}
+
+html, body{
+    margin:0px;
+    height:100%;
+    background-color: var(--bg-color);
+}
+
+h2{
+    margin-bottom: 0px;
+}
+
+p{
+    margin-top: 15px;
+}
+
+.vsplit{
+    height:100%;
+    position: fixed;
+}
+
+.vertical_nav{
+    float: left;
+    width: 175px;
+    background-color: var(--nav-color);
+    text-align:center;
+}
+
+.vertical_nav > .button{
+    border-bottom-style:solid;
+    width: 155px;
+    padding:10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.vertical_nav > .button.selected{
+    background-color:var(--nav-color-selected);
+}
+
+.vertical_nav > .button:hover{
+    cursor:pointer;
+    background-color: var(--nav-color-hover);
+}
+
+.vertical_nav > .button:hover.selected{
+    cursor:pointer;
+    background-color:var(--nav-color-selected-hover);
+}
+
+/*Below has nothing to do with the nav bar */
+.infobox{
+    background-color:var(--textbox-color);
+    border-color:var(--textbox-color);
+    height: auto;
+    resize: vertical;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    border-style: solid;
+    display: inline-block;
+}
+
+#main_body{
+    margin-left: 175px;
+    margin-bottom: 60px;
+    overflow:auto;
+}
+
+#main_body > *{
+    margin-left: 15px;
+    margin-bottom: 15px;
+    width:calc(100% - 30px);
+}
+
+#back_button{
+    background-color:var(--nav-color-selected);
+}
+
+/* text input /*/
+#LG_input{
+    display:none;
+}
