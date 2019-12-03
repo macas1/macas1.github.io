@@ -6,7 +6,7 @@ settings_lg_parser =
         "assessmentSum": ["Assessment Summary"],
         "readings": ["Recommended Readings"],
         "textbook": ["Prescribed Textbook"],
-        "curriculumModes": ["Quiz", "Essay", "Practical", "Presentation", "Participation", "Report", "Final Exam", "Exam", "Intra-session Exam"],
+        "curriculumModes": ["Quiz", "Essay", "Practical", "Presentation", "Participation", "Report", "Final Exam", "Exam", "Intra-session Exam", "Viva Voce", "Translation"],
         "coordinators": ["Unit Coordinator", "Campus Coordinator"],
     },
     "subheadings": {
