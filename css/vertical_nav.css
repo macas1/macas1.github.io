@@ -71,6 +71,7 @@ p{
     overflow-wrap: break-word;
     border-style: solid;
     display: inline-block;
+    width:100%;
 }
 
 #main_body{
