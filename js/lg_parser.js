@@ -59,9 +59,8 @@ window.onload = function(){
 function trim_numbers(string){
     //TODO: This is unsafe as if a string ends with a number, that number is removed.
     var last_removed_dot = false;
-
     while(true){
-        if(isNumber(string[string.length-1])){
+        if(isNumber(string[string.length-1]) || string[string.length-1] == " "){
             if(string[string.length-2] == "."){
                 string = string.slice(0, -2);
                 last_removed_dot = true;
@@ -73,11 +72,9 @@ function trim_numbers(string){
             break;
         }
     }
-
     if(last_removed_dot){
         string += ".";
     }
-
     return string;
 }
 
@@ -127,6 +124,23 @@ function capitalise(str){
         return str;
     }
     return str.charAt(0).toUpperCase() + str.substring(1);
+}
+
+function copyStringToClipboard (str) {
+   // Create new element
+   var el = document.createElement('textarea');
+   // Set value (string to be copied)
+   el.value = str;
+   // Set non-editable to avoid focus and move outside of view
+   el.setAttribute('readonly', '');
+   el.style = {position: 'absolute', left: '-9999px'};
+   document.body.appendChild(el);
+   // Select text inside element
+   el.select();
+   // Copy text to clipboard
+   document.execCommand('copy');
+   // Remove temporary element
+   document.body.removeChild(el);
 }
 
 // ----------------------------------------------------------------------------
@@ -273,12 +287,19 @@ function add_intro(pdf){
 }
 
 function add_ULOs(pdf){
-    var block = format_str(get_main_section(pdf, settings.headings.ULOs));
     var num = 1;
     var ULOs = [];
     var current = "";
-    var chr, chr2;
+    var chr, chr2, chr3;
     var parentheses_depth = 0;
+    var stopstr = "At the successful completion of this unit, students will be able to:";
+    var block = format_str(get_main_section(pdf, settings.headings.ULOs));
+    if(block.includes(stopstr)){
+        block = block.substring(
+            block.indexOf(stopstr) + stopstr.length,
+            block.length
+        );
+    }
 
     for(var i = 0; i < block.length; i++){
         chr = block[i];
@@ -288,9 +309,14 @@ function add_ULOs(pdf){
             chr2 = block[i+1];
         }
 
+        chr3 = " ";
+        if(i < block.length-2){
+            chr3 = block[i+2];
+        }
+
         current += chr;
 
-        if(chr2==num && parentheses_depth == 0){
+        if(chr2==num && chr3!=num && parentheses_depth == 0){
             if(chr2 != 1 && current){
                 ULOs.push(capitalise(remove_spaces(current)));
             }
@@ -309,6 +335,11 @@ function add_ULOs(pdf){
             }
         }
     }
+
+    if(current){
+      ULOs.push(capitalise(remove_spaces(current)));
+    }
+
     pdf.ULOs = ULOs;
 }
 
@@ -517,7 +548,8 @@ function add_coordinators(pdf){
                 }
             }
 
-            coords[i][poses[j].title] = format_str(block.substring(
+            // Add heading data
+            coords[i][poses[j].title] = remove_spaces(block.substring(
                 poses[j].pos + poses[j].title.length + 1,
                 pos
             ));
@@ -600,37 +632,19 @@ function event_display(button){
 
 function event_copy(button){
     // Unhide
-    var target = document.getElementById("LG_box_"+button.id.split("_")[2]);
-    var title = document.getElementById("LG_title_"+button.id.split("_")[2]);
     var info = document.getElementById("LG_info_"+button.id.split("_")[2]);
-    var hide = false;
-
-    // Unhide
-    if(target.style.display == "none"){
-        hide = true;
-        target.style.display = "block";
-    }
+    var title = document.getElementById("LG_title_"+button.id.split("_")[2]);
 
     // Select
     window.getSelection().selectAllChildren(info);
 
     // Copy
-    document.execCommand("copy");
-
-    // Deselect
-    if (window.getSelection) {window.getSelection().removeAllRanges();}
-    else if (document.selection) {document.selection.empty();}
+    copyStringToClipboard(remove_spaces(info.innerHTML));
 
     // Display a copy notification
     $.growl({title:"Copy Success",
-             message: "Copied '" + title.innerHTML + "' to clipboard."
+             message: "Copied html of '" + title.innerHTML + "' to clipboard."
     });
-
-    // Rehide
-    if(hide){
-        target.style.display = "none";
-        button.classList.remove("selected");
-    }
 }
 
 function populate_welcome(objs, pdf){
@@ -723,9 +737,7 @@ function populate_resources(objs, pdf){
             html += "<li>" + pdf.textbooks[i] + "</li>";
         }
     }else{
-        for(var i=0; i<2; i++){
-            html += "<li>Author, Initial(s) Year of publication, <em>Title of book</em>, Publisher, Place of publication.</li>";
-        }
+        html += "<li>No prescribed textbook</li>";
     }
 
     html += "</ul><h5>Key Resources</h5><ul>";
@@ -763,7 +775,7 @@ function populate_assessmentSum(objs, pdf){
     if("assSum" in pdf && pdf.assSum){
         for(var i=0; i<pdf.assSum.length; i++){
             html += "<tr>" +
-                    "<td>Assessment " + i.toString() + ": " + pdf.assSum[i].text + "</td>" +
+                    "<td>Assessment " + (i+1).toString() + ": " + pdf.assSum[i].text + "</td>" +
                     "<td>" + pdf.assSum[i].type + "</td>" +
                     "<td>" + pdf.assSum[i].weight + "%</td>" +
                     "<td> </td></tr>";
@@ -805,7 +817,7 @@ function populate_assessmentSum(objs, pdf){
 function populate_staff(objs, pdf){
     var populated = false;
     var html = "";
-    var temp;
+    var temp, temp2;
 
     if("coordinators" in pdf){
         for(var i=0; i<pdf.coordinators.length; i++){
@@ -828,7 +840,10 @@ function populate_staff(objs, pdf){
             // Email
             temp = "email@westernsydney.edu.au";
             if(pdf.coordinators[i].Email){
-                temp = pdf.coordinators[i].Email;
+                temp = pdf.coordinators[i].Email.toLowerCase();
+                while(temp.includes(",")){
+                    temp = temp.replace(",", ".");
+                }
             }
             html += "<li>E: <a href=\"mailto:" + temp + "\" title=\"Email\" target=\"_blank\"\
                      >" + temp + "</a></li>";
@@ -837,6 +852,13 @@ function populate_staff(objs, pdf){
             temp == "_______phone_______";
             if(pdf.coordinators[i].Phone){
                 temp = pdf.coordinators[i].Phone;
+                temp2 = "";
+                for(var c=0; c<temp.length; c++){
+                    if(temp[c].match(/([0-9]|\(|\))/g)){
+                        temp2 += temp[c]
+                    }
+                }
+                temp = temp2;
             }
             html += "<li>P: " + temp + "</li>";
 
