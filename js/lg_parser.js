@@ -300,6 +300,14 @@ function add_ULOs(pdf){
             block.length
         );
     }
+	
+    stopstr = "Outcome1";
+    if(block.includes(stopstr)){
+        block = block.substring(
+            block.indexOf(stopstr) + stopstr.length,
+            block.length
+        );
+    }
 
     for(var i = 0; i < block.length; i++){
         chr = block[i];
