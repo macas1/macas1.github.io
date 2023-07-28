@@ -1,0 +1,202 @@
+[
+    {
+        "Name": "Academic's Hat",
+        "Armour": 11,
+        "Weight": 7,
+        "Bleed": 1,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 2,
+        "Toxin": 3
+    },
+    {
+        "Name": "Bruiser Helmet",
+        "Armour": 15,
+        "Weight": 9,
+        "Bleed": 1,
+        "Fire": 2,
+        "Shock": 0,
+        "Blight": 0,
+        "Toxin": 1
+    },
+    {
+        "Name": "Dendroid Mask",
+        "Armour": 7,
+        "Weight": 3,
+        "Bleed": 2,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 0,
+        "Toxin": 2
+    },
+    {
+        "Name": "Elder Headdress",
+        "Armour": 12,
+        "Weight": 6,
+        "Bleed": 0,
+        "Fire": 3,
+        "Shock": 0,
+        "Blight": 2,
+        "Toxin": 0
+    },
+    {
+        "Name": "Fae Royal Headcover",
+        "Armour": 15,
+        "Weight": 8,
+        "Bleed": 2,
+        "Fire": 2,
+        "Shock": 0,
+        "Blight": 2,
+        "Toxin": 0
+    },
+    {
+        "Name": "Field Medic Hat",
+        "Armour": 9,
+        "Weight": 5,
+        "Bleed": 0,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 2,
+        "Toxin": 1
+    },
+    {
+        "Name": "Field Medic Mask",
+        "Armour": 9,
+        "Weight": 5,
+        "Bleed": 0,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 2,
+        "Toxin": 1
+    },
+    {
+        "Name": "High Noon Hat",
+        "Armour": 8,
+        "Weight": 4,
+        "Bleed": 0,
+        "Fire": 1,
+        "Shock": 1,
+        "Blight": 0,
+        "Toxin": 1
+    },
+    {
+        "Name": "Knotted Helm",
+        "Armour": 13,
+        "Weight": 8,
+        "Bleed": 0,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 1,
+        "Toxin": 2
+    },
+    {
+        "Name": "Leto Mark II Helmet",
+        "Armour": 22,
+        "Weight": 13,
+        "Bleed": 2,
+        "Fire": 3,
+        "Shock": 1,
+        "Blight": 1,
+        "Toxin": 2
+    },
+    {
+        "Name": "Lodestone Crown",
+        "Armour": 5,
+        "Weight": 3,
+        "Bleed": -2,
+        "Fire": 0,
+        "Shock": -1,
+        "Blight": 5,
+        "Toxin": 0
+    },
+    {
+        "Name": "Navigator's Helm",
+        "Armour": 12,
+        "Weight": 8,
+        "Bleed": -1,
+        "Fire": -1,
+        "Shock": 2,
+        "Blight": -1,
+        "Toxin": 3
+    },
+    {
+        "Name": "Nightstalker Shroud",
+        "Armour": 11,
+        "Weight": 6,
+        "Bleed": 0,
+        "Fire": 1,
+        "Shock": 1,
+        "Blight": 3,
+        "Toxin": 0
+    },
+    {
+        "Name": "Radiant Visage",
+        "Armour": 14,
+        "Weight": 8,
+        "Bleed": 1,
+        "Fire": 1,
+        "Shock": 3,
+        "Blight": 1,
+        "Toxin": 0
+    },
+    {
+        "Name": "Realmwalker Beret",
+        "Armour": 4,
+        "Weight": 2,
+        "Bleed": 0,
+        "Fire": 0,
+        "Shock": 1,
+        "Blight": 1,
+        "Toxin": 0
+    },
+    {
+        "Name": "Red Widow Headdress",
+        "Armour": 13,
+        "Weight": 8,
+        "Bleed": 2,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 2,
+        "Toxin": 0
+    },
+    {
+        "Name": "Space Worker Mask",
+        "Armour": 6,
+        "Weight": 3,
+        "Bleed": 1,
+        "Fire": 0,
+        "Shock": 2,
+        "Blight": 0,
+        "Toxin": 2
+    },
+    {
+        "Name": "Technician Helmet",
+        "Armour": 14,
+        "Weight": 8,
+        "Bleed": 0,
+        "Fire": 1,
+        "Shock": 2,
+        "Blight": 0,
+        "Toxin": 2
+    },
+    {
+        "Name": "Trainer Cap",
+        "Armour": 7,
+        "Weight": 4,
+        "Bleed": 0,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 0,
+        "Toxin": 1
+    },
+    {
+        "Name": "Void Skull",
+        "Armour": 15,
+        "Weight": 8,
+        "Bleed": 0,
+        "Fire": 1,
+        "Shock": 2,
+        "Blight": 0,
+        "Toxin": 1
+    }
+]
