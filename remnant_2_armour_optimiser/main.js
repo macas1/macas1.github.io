@@ -178,9 +178,9 @@ function generateTable(sortCol=0) {
     rowArray.forEach(row => table.appendChild(row))
 }
 
-function tryParseInt(v) {
-  const i = parseInt(v)
-  return i === NaN ? i : v
+function tryParseInt(a) { 
+    const n = Number(a)
+    return n.isNaN ? a : n
 }
 
 // Run main
