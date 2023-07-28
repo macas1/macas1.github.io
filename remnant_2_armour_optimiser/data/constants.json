@@ -1,0 +1,15 @@
+{ 
+    "TableHeaders": [
+        "Armour",
+        "Weight",
+        "Bleed",
+        "Fire",
+        "Shock",
+        "Blight",
+        "Toxin",
+        "Head",
+        "Body",
+        "Legs",
+        "Hands"
+    ]
+}

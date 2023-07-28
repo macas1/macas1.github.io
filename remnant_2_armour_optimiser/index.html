@@ -37,21 +37,11 @@
                     <td><input id="minToxinInput" type="number" min="-10" max="100" value="-10"></td>
                 </tr>
             </table>
+            <button type="button" onclick="generateTable()">Generate Table</button>
         </div>
 
         <div id="results">
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Armour</th>
-                    <th>Weight</th>
-                    <th>Bleed</th>
-                    <th>Fire</th>
-                    <th>Shock</th>
-                    <th>Blight</th>
-                    <th>Toxin</th>
-                </tr>
-            </table>
+            <table id="resultsTable"></table>
         </div>
     </body>
 </html>
