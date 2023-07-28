@@ -1,0 +1,12 @@
+body {
+    background: #f8f8ff;
+}
+
+#resultsTable {
+    border-spacing: 2px;
+    border-color: gray;
+}
+
+.FillWidth {
+    width: 100%
+}

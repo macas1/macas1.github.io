@@ -1,47 +1,42 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="module" src="init.js"></script>
+        <script type="module" src="main.js"></script>
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <h1>This page is in progress</h1>
-
-        <div id="requirements">
-            <table>
-                <tr>
-                    <td>Maximum Weight</td>
-                    <td><input id="maxWeightInput" type="number" min="-10" max="100" value="50"></td>
-                </tr>
-                <tr>
-                    <td>Minimum Armour</td>
-                    <td><input id="minArmourInput" type="number" min="-10" max="100" value="-10"></td>
-                </tr>
-                <tr>
-                    <td>Minimum Bleed</td>
-                    <td><input id="minBleedInput" type="number" min="-10" max="100" value="-10"></td>
-                </tr>
-                <tr>
-                    <td>Minimum Fire</td>
-                    <td><input id="minFireInput" type="number" min="-10" max="100" value="-10"></td>
-                </tr>
-                <tr>
-                    <td>Minimum Shock</td>
-                    <td><input id="minShockInput" type="number" min="-10" max="100" value="-10"></td>
-                </tr>
-                <tr>
-                    <td>Minimum Blight</td>
-                    <td><input id="minBlightInput" type="number" min="-10" max="100" value="-10"></td>
-                </tr>
-                <tr>
-                    <td>Minimum Toxin</td>
-                    <td><input id="minToxinInput" type="number" min="-10" max="100" value="-10"></td>
-                </tr>
-            </table>
-            <button id="generateTableButton" type="button">Generate Table</button>
-        </div>
-
-        <div id="results">
-            <table id="resultsTable"></table>
-        </div>
+        <table>
+            <tr>
+                <td>Maximum Weight</td>
+                <td><input id="maxWeightInput" class="FillWidth" type="number" min="-1" max="10" value="50"></td>
+            </tr>
+            <tr>
+                <td>Minimum Armour</td>
+                <td><input id="minArmourInput" class="FillWidth" type="number" min="-1" max="100" value="-1"></td>
+            </tr>
+            <tr>
+                <td>Minimum Bleed</td>
+                <td><input id="minBleedInput" class="FillWidth" type="number" min="-1" max="10" value="-1"></td>
+            </tr>
+            <tr>
+                <td>Minimum Fire</td>
+                <td><input id="minFireInput" class="FillWidth" type="number" min="-1" max="10" value="-1"></td>
+            </tr>
+            <tr>
+                <td>Minimum Shock</td>
+                <td><input id="minShockInput" class="FillWidth" type="number" min="-1" max="10" value="-1"></td>
+            </tr>
+            <tr>
+                <td>Minimum Blight</td>
+                <td><input id="minBlightInput" class="FillWidth" type="number" min="-1" max="10" value="-1"></td>
+            </tr>
+            <tr>
+                <td>Minimum Toxin</td>
+                <td><input id="minToxinInput" class="FillWidth" type="number" min="-1" max="10" value="-1"></td>
+            </tr>
+        </table>
+        <button id="generateTableButton" type="button">Generate Table</button>
+        <table id="resultsTable"></table>
     </body>
 </html>
