@@ -29,9 +29,9 @@ class ArmourSet {
 
     generateRow() {
         const row = document.createElement("tr")
-        for (v in constants["TableHeaders"]) {
+        for (const value in constants["TableHeaders"]) {
             let cell = document.createElement("td")
-            cell.innerText = getValue[v]
+            cell.innerText = getValue[value]
             row.appendChild(cell)
         }
         return row
@@ -46,9 +46,9 @@ function main() {
 
 function create_results_headers() {
     const row = document.createElement("tr")
-    for (v in constants["TableHeaders"]) {
+    for (const value in constants["TableHeaders"]) {
         let cell = document.createElement("th")
-        cell.innerText = v
+        cell.innerText = value
         row.appendChild(cell)
     }
     document.getElementById("resultsTable").appendChild(row)
