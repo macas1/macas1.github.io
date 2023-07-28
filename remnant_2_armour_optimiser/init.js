@@ -134,8 +134,8 @@ function generateTable() {
         "Weight": document.getElementById("maxWeightInput").value
     }
 
-    while (table.rowCount > 1) {
-        table.deleteRow(rowCount -1);
+    while (table.rows.length > 1) {
+        table.deleteRow(table.rows.length - 1);
     }
 
     permSets(set => {
