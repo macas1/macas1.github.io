@@ -31,7 +31,7 @@ class ArmourSet {
         const row = document.createElement("tr")
         for (const value in constants["TableHeaders"]) {
             let cell = document.createElement("td")
-            cell.innerText = getValue[value]
+            cell.innerText = getValue(constants["TableHeaders"][value])
             row.appendChild(cell)
         }
         return row
@@ -134,13 +134,13 @@ export function generateTable() {
     }
 
     permSets(set => {
-        for (const stat in min_Values) {
+        for (const stat in min_values) {
             if (set.getValue[stat] < min_values[stat]) { 
                 return 
             }
         }
-        for (const stat in max_Values) {
-            if (set.getValue[stat] > max_Values[stat]) { 
+        for (const stat in max_values) {
+            if (set.getValue[stat] > max_values[stat]) { 
                 return 
             }
         }
