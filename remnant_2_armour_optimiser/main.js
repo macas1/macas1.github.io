@@ -175,7 +175,11 @@ function generateTable(sortCol=0) {
     })
 
     // Add rows to results table
-    rowArray.forEach(row => table.appendChild(row))
+    const max_row_count = document.getElementById("noOfResultsInput").value
+    for (const row in rowArray) {
+        if (row == max_row_count) { return }
+        table.appendChild(rowArray[row])
+    }
 }
 
 function tryParseInt(a) { 
