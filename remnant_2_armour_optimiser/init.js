@@ -28,18 +28,13 @@ class ArmourSet {
     }
 
     generateRow() {
-        console.log("START")
-        // const row = document.createElement("tr")
+        const row = document.createElement("tr")
         for (const value in constants["TableHeaders"]) {
-        //     let cell = document.createElement("td")
-            console.log(this.getValue(constants["TableHeaders"][value]))
-        //    cell.innerText = this.getValue(constants["TableHeaders"][value])
-        //     row.appendChild(cell)
+            let cell = document.createElement("td")
+            cell.innerText = getValue(constants["TableHeaders"][value])
+            row.appendChild(cell)
         }
-        // return row
-
-        
-        console.log()
+        return row
     }
 }
 
@@ -145,12 +140,12 @@ function generateTable() {
 
     permSets(set => {
         for (const stat in min_values) {
-            if (set.getValue[stat] < min_values[stat]) { 
+            if (set.getValue(stat) < min_values[stat]) { 
                 return 
             }
         }
         for (const stat in max_values) {
-            if (set.getValue[stat] > max_values[stat]) { 
+            if (set.getValue(stat) > max_values[stat]) { 
                 return 
             }
         }
