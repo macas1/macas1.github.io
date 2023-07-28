@@ -12,8 +12,13 @@ body {
     border-color: gray;
     padding-left: 4px;
     padding-right: 4px;
+    text-align: left;
 }
 
 .FillWidth {
     width: 100%
+}
+
+.SortSymbol {
+    visibility: hidden;
 }

@@ -46,7 +46,16 @@ function main() {
 }
 
 function add_event_listeners() {
+    // Generate table
     document.getElementById("generateTableButton").addEventListener('click', generateTable)
+
+    // Sort table
+    document.getElementById("resultsTable").querySelectorAll('th')
+        .forEach ((element, columnNo) => {
+            element.addEventListener('click', event => {
+            generateTable(columnNo)
+        })
+    })
 }
 
 function create_results_headers() {
@@ -117,7 +126,7 @@ function permSets(withEachSet) {
 }
 
 // Interactive
-function generateTable() {
+function generateTable(sortCol=0) {
     const table = document.getElementById("resultsTable")
 
     // TODO: link these with constants: VALUE, ID
@@ -138,6 +147,7 @@ function generateTable() {
         table.deleteRow(table.rows.length - 1);
     }
 
+    let rowArray = []
     permSets(set => {
         for (const stat in min_values) {
             if (set.getValue(stat) < min_values[stat]) { 
@@ -149,9 +159,19 @@ function generateTable() {
                 return 
             }
         }
-
-        table.appendChild(set.generateRow())
+        rowArray.push(set.generateRow())
+        
     })
+
+    rowArray.sort((rowA, rowB) => {
+        const a = rowA.cells[sortCol].innerText
+        const b = rowB.cells[sortCol].innerText
+        return a < b ? -1 : a > b ? 1 : 0
+    })
+
+    for(const row in rowArray) {
+        table.appendChild(row)
+    }
 }
 
 // Run main
