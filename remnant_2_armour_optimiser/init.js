@@ -28,13 +28,18 @@ class ArmourSet {
     }
 
     generateRow() {
-        const row = document.createElement("tr")
+        console.log("START")
+        // const row = document.createElement("tr")
         for (const value in constants["TableHeaders"]) {
-            let cell = document.createElement("td")
-            cell.innerText = this.getValue(constants["TableHeaders"][value])
-            row.appendChild(cell)
+        //     let cell = document.createElement("td")
+            console.log(this.getValue(constants["TableHeaders"][value]))
+        //    cell.innerText = this.getValue(constants["TableHeaders"][value])
+        //     row.appendChild(cell)
         }
-        return row
+        // return row
+
+        
+        console.log()
     }
 }
 
