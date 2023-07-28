@@ -1,0 +1,182 @@
+[
+    {
+        "Name": "Academic's Trousers",
+        "Armour": 17,
+        "Weight": 10,
+        "Bleed": 2,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 1,
+        "Toxin": 4
+    },
+    {
+        "Name": "Bruiser Boots",
+        "Armour": 27,
+        "Weight": 15,
+        "Bleed": 1,
+        "Fire": 4,
+        "Shock": 0,
+        "Blight": 0,
+        "Toxin": 2
+    },
+    {
+        "Name": "Dendroid Leggings",
+        "Armour": 13,
+        "Weight": 7,
+        "Bleed": 3,
+        "Fire": 0,
+        "Shock": 2,
+        "Blight": 2,
+        "Toxin": 0
+    },
+    {
+        "Name": "Elder Leggings",
+        "Armour": 12,
+        "Weight": 6,
+        "Bleed": 0,
+        "Fire": 3,
+        "Shock": 0,
+        "Blight": 2,
+        "Toxin": 1
+    },
+    {
+        "Name": "Fae Royal Greaves",
+        "Armour": 25,
+        "Weight": 13,
+        "Bleed": 2,
+        "Fire": 3,
+        "Shock": 0,
+        "Blight": 2,
+        "Toxin": 0
+    },
+    {
+        "Name": "Field Medic Trousers",
+        "Armour": 16,
+        "Weight": 9,
+        "Bleed": 4,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 2,
+        "Toxin": 0
+    },
+    {
+        "Name": "High Noon Soles",
+        "Armour": 18,
+        "Weight": 10,
+        "Bleed": 0,
+        "Fire": 3,
+        "Shock": 2,
+        "Blight": 0,
+        "Toxin": 2
+    },
+    {
+        "Name": "Knotted Greaves",
+        "Armour": 26,
+        "Weight": 14,
+        "Bleed": 1,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 2,
+        "Toxin": 4
+    },
+    {
+        "Name": "Leto Mark II Leggings",
+        "Armour": 45,
+        "Weight": 23,
+        "Bleed": 3,
+        "Fire": 2,
+        "Shock": 3,
+        "Blight": 3,
+        "Toxin": 2
+    },
+    {
+        "Name": "Nightstalker Pants",
+        "Armour": 18,
+        "Weight": 9,
+        "Bleed": 2,
+        "Fire": 2,
+        "Shock": 1,
+        "Blight": 1,
+        "Toxin": 0
+    },
+    {
+        "Name": "Radiant Greaves",
+        "Armour": 29,
+        "Weight": 17,
+        "Bleed": 1,
+        "Fire": 1,
+        "Shock": 3,
+        "Blight": 1,
+        "Toxin": 0
+    },
+    {
+        "Name": "Realmwalker Pantaloons",
+        "Armour": 12,
+        "Weight": 6,
+        "Bleed": 2,
+        "Fire": 1,
+        "Shock": 2,
+        "Blight": 3,
+        "Toxin": 0
+    },
+    {
+        "Name": "Red Widow Leggings",
+        "Armour": 23,
+        "Weight": 12,
+        "Bleed": 3,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 3,
+        "Toxin": 1
+    },
+    {
+        "Name": "Space Worker Legs",
+        "Armour": 12,
+        "Weight": 7,
+        "Bleed": 1,
+        "Fire": 1,
+        "Shock": 3,
+        "Blight": 0,
+        "Toxin": 2
+    },
+    {
+        "Name": "Survivor Leggings",
+        "Armour": 18,
+        "Weight": 10,
+        "Bleed": 1,
+        "Fire": 1,
+        "Shock": 1,
+        "Blight": 1,
+        "Toxin": 2
+    },
+    {
+        "Name": "Technician Greaves",
+        "Armour": 26,
+        "Weight": 14,
+        "Bleed": 0,
+        "Fire": 1,
+        "Shock": 3,
+        "Blight": 0,
+        "Toxin": 2
+    },
+    {
+        "Name": "Trainer Workboots",
+        "Armour": 17,
+        "Weight": 8,
+        "Bleed": 1,
+        "Fire": 0,
+        "Shock": 1,
+        "Blight": 1,
+        "Toxin": 2
+    },
+    {
+        "Name": "Void Greaves",
+        "Armour": 26,
+        "Weight": 15,
+        "Bleed": 0,
+        "Fire": 2,
+        "Shock": 2,
+        "Blight": 0,
+        "Toxin": 3
+    }
+]

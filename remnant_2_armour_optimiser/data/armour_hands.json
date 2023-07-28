@@ -1,0 +1,182 @@
+[
+    {
+        "Name": "Academic's Gloves",
+        "Armour": 7,
+        "Weight": 4,
+        "Bleed": 0,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 1,
+        "Toxin": 2
+    },
+    {
+        "Name": "Bruiser Gloves",
+        "Armour": 11,
+        "Weight": 7,
+        "Bleed": 1,
+        "Fire": 2,
+        "Shock": 0,
+        "Blight": 0,
+        "Toxin": 1
+    },
+    {
+        "Name": "Dendroid Grips",
+        "Armour": 4,
+        "Weight": 3,
+        "Bleed": 1,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 1,
+        "Toxin": 1
+    },
+    {
+        "Name": "Elder Gloves",
+        "Armour": 3,
+        "Weight": 3,
+        "Bleed": 0,
+        "Fire": 2,
+        "Shock": 0,
+        "Blight": 1,
+        "Toxin": 1
+    },
+    {
+        "Name": "Fae Royal Vambraces",
+        "Armour": 10,
+        "Weight": 7,
+        "Bleed": 1,
+        "Fire": 1,
+        "Shock": 0,
+        "Blight": 1,
+        "Toxin": 0
+    },
+    {
+        "Name": "Field Medic Gloves",
+        "Armour": 8,
+        "Weight": 5,
+        "Bleed": 2,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 1,
+        "Toxin": 1
+    },
+    {
+        "Name": "High Noon Armguards",
+        "Armour": 8,
+        "Weight": 6,
+        "Bleed": 0,
+        "Fire": 2,
+        "Shock": 2,
+        "Blight": 0,
+        "Toxin": 1
+    },
+    {
+        "Name": "Knotted Gloves",
+        "Armour": 10,
+        "Weight": 6,
+        "Bleed": 1,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 1,
+        "Toxin": 2
+    },
+    {
+        "Name": "Leto Mark II Gloves",
+        "Armour": 17,
+        "Weight": 10,
+        "Bleed": 2,
+        "Fire": 1,
+        "Shock": 2,
+        "Blight": 1,
+        "Toxin": 3
+    },
+    {
+        "Name": "Nightstalker Gloves",
+        "Armour": 6,
+        "Weight": 3,
+        "Bleed": 2,
+        "Fire": 1,
+        "Shock": 1,
+        "Blight": 7,
+        "Toxin": 0
+    },
+    {
+        "Name": "Radiant Bracers",
+        "Armour": 11,
+        "Weight": 6,
+        "Bleed": 1,
+        "Fire": 1,
+        "Shock": 2,
+        "Blight": 0,
+        "Toxin": 0
+    },
+    {
+        "Name": "Realmwalker Gloves",
+        "Armour": 3,
+        "Weight": 2,
+        "Bleed": 0,
+        "Fire": 1,
+        "Shock": 1,
+        "Blight": 1,
+        "Toxin": 0
+    },
+    {
+        "Name": "Red Widow Bracers",
+        "Armour": 7,
+        "Weight": 5,
+        "Bleed": 2,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 2,
+        "Toxin": 0
+    },
+    {
+        "Name": "Space Worker Gloves",
+        "Armour": 4,
+        "Weight": 2,
+        "Bleed": 1,
+        "Fire": 1,
+        "Shock": 1,
+        "Blight": 0,
+        "Toxin": 1
+    },
+    {
+        "Name": "Survivor Gloves",
+        "Armour": 6,
+        "Weight": 4,
+        "Bleed": 1,
+        "Fire": 1,
+        "Shock": 1,
+        "Blight": 1,
+        "Toxin": 1
+    },
+    {
+        "Name": "Technician Gloves",
+        "Armour": 10,
+        "Weight": 6,
+        "Bleed": 0,
+        "Fire": 1,
+        "Shock": 2,
+        "Blight": 0,
+        "Toxin": 1
+    },
+    {
+        "Name": "Trainer Bracer",
+        "Armour": 7,
+        "Weight": 3,
+        "Bleed": 2,
+        "Fire": 0,
+        "Shock": 3,
+        "Blight": 1,
+        "Toxin": 1
+    },
+    {
+        "Name": "Void Wraps",
+        "Armour": 8,
+        "Weight": 6,
+        "Bleed": 0,
+        "Fire": 1,
+        "Shock": 1,
+        "Blight": 0,
+        "Toxin": 1
+    }
+]
