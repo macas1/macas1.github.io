@@ -42,6 +42,11 @@ class ArmourSet {
 function main() {
     update_value_ranges()
     create_results_headers()
+    add_event_listeners()
+}
+
+function add_event_listeners() {
+    document.getElementById("generateTableButton").addEventListener('click', generateTable)
 }
 
 function create_results_headers() {
@@ -112,7 +117,7 @@ function permSets(withEachSet) {
 }
 
 // Interactive
-export function generateTable() {
+function generateTable() {
     const table = document.getElementById("resultsTable")
 
     // TODO: link these with constants: VALUE, ID
