@@ -59,7 +59,7 @@ function permSets(withEachSet) {
         armour_hands.forEach(hands => {
             armour_head.forEach(head => {
                 armour_legs.forEach(legs => {
-                    withEachSet(ArmourSet(body, hands, head, legs))
+                    withEachSet(new ArmourSet(body, hands, head, legs))
                 })
             })
         })
