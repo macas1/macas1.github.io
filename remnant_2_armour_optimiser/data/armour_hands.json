@@ -1,5 +1,15 @@
 [
     {
+        "Name": "None",
+        "Armour": 0,
+        "Weight": 0,
+        "Bleed": 0,
+        "Fire": 0,
+        "Shock": 0,
+        "Blight": 0,
+        "Toxin": 0
+    },
+    {
         "Name": "Academic's Gloves",
         "Armour": 7,
         "Weight": 4,
