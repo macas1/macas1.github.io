@@ -19,5 +19,5 @@
 //     console.log(armour_body)
 // }
 
-import data from '../data/armour_body.json' assert { type: 'json' };
+import data from './data/armour_body.json' assert { type: 'json' };
 console.log(data);
