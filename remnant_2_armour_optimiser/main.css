@@ -3,7 +3,12 @@ body {
 }
 
 #resultsTable {
+    border-collapse: collapse;
+}
+
+#resultsTable td, #resultsTable th {
     border-spacing: 2px;
+    border-width: 1px;
     border-color: gray;
 }
 
