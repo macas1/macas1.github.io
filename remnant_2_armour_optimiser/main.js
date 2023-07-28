@@ -29,11 +29,11 @@ class ArmourSet {
 
     generateRow() {
         const row = document.createElement("tr")
-        for (const value in constants["TableHeaders"]) {
+        constants["TableHeaders"].forEach(value => {
             let cell = document.createElement("td")
-            cell.innerText = this.getValue(constants["TableHeaders"][value])
+            cell.innerText = this.getValue(value)
             row.appendChild(cell)
-        }
+        })
         return row
     }
 }
@@ -47,7 +47,7 @@ function main() {
 
 function add_event_listeners() {
     // Generate table
-    document.getElementById("generateTableButton").addEventListener('click', generateTable)
+    document.getElementById("generateTableButton").addEventListener('click', event => { generateTable() })
 
     // Sort table
     document.getElementById("resultsTable").querySelectorAll('th')
@@ -60,11 +60,11 @@ function add_event_listeners() {
 
 function create_results_headers() {
     const row = document.createElement("tr")
-    for (const index in constants["TableHeaders"]) {
+    constants["TableHeaders"].forEach(value => {
         let cell = document.createElement("th")
-        cell.innerText = constants["TableHeaders"][index]
+        cell.innerText = value
         row.appendChild(cell)
-    }
+    })
     document.getElementById("resultsTable").appendChild(row)
 }
 
@@ -169,9 +169,7 @@ function generateTable(sortCol=0) {
         return a < b ? -1 : a > b ? 1 : 0
     })
 
-    for(const row in rowArray) {
-        table.appendChild(row)
-    }
+    rowArray.forEach(row => table.appendChild(row))
 }
 
 // Run main
