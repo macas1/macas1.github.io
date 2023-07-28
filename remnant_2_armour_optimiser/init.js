@@ -42,6 +42,20 @@ function update_value_ranges() {
 
     // Do things with values
     console.log(values)
+    setupNumberInputValues("maxWeightInput", values["Weight"], false)
+    setupNumberInputValues("minArmourInput", values["Armour"])
+    setupNumberInputValues("minBleedInput",  values["Bleed"])
+    setupNumberInputValues("minFireInput",   values["Fire"])
+    setupNumberInputValues("minShockInput",  values["Shock"])
+    setupNumberInputValues("minBlightInput", values["Blight"])
+    setupNumberInputValues("minToxinInput",  values["Toxin"])
+}
+
+function setupNumberInputValues(id, values, setValueToMin=true) {
+    const e = document.getElementById(id)
+    e.min = values.min
+    e.max = values.max
+    e.value = setValueToMin ? e.min : e.max
 }
 
 function calcMin(old, current) {
