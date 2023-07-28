@@ -31,7 +31,7 @@ class ArmourSet {
         const row = document.createElement("tr")
         for (const value in constants["TableHeaders"]) {
             let cell = document.createElement("td")
-            cell.innerText = getValue(constants["TableHeaders"][value])
+            cell.innerText = this.getValue(constants["TableHeaders"][value])
             row.appendChild(cell)
         }
         return row
