@@ -12,6 +12,9 @@ class ArmourSet {
     }
 
     getSum(value_name) {
+        if (value_name == "Name") {
+            return `${this.head[value_name]}\n${this.body[value_name]}\n${this.legs[value_name]}\n${this.hands[value_name]}`
+        } 
         return this.body[value_name] + this.hands[value_name] + this.head[value_name] + this.legs[value_name]
     }
 }
@@ -42,7 +45,7 @@ function update_value_ranges() {
 
     // Do things with values
     console.log(values)
-    setupNumberInputValues("maxWeightInput", values["Weight"], false)
+    setupNumberInputValues("maxWeightInput", values["Weight"], 50)
     setupNumberInputValues("minArmourInput", values["Armour"])
     setupNumberInputValues("minBleedInput",  values["Bleed"])
     setupNumberInputValues("minFireInput",   values["Fire"])
@@ -51,11 +54,11 @@ function update_value_ranges() {
     setupNumberInputValues("minToxinInput",  values["Toxin"])
 }
 
-function setupNumberInputValues(id, values, setValueToMin=true) {
+function setupNumberInputValues(id, values, default_value=null) {
     const e = document.getElementById(id)
     e.min = values.min
     e.max = values.max
-    e.value = setValueToMin ? e.min : e.max
+    e.value = default_value == null ? e.min : default_value
 }
 
 function calcMin(old, current) {
