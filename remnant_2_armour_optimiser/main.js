@@ -127,6 +127,7 @@ function permSets(withEachSet) {
 
 // Interactive
 function generateTable(sortCol=0) {
+    // Consts
     const table = document.getElementById("resultsTable")
 
     // TODO: link these with constants: VALUE, ID
@@ -147,6 +148,7 @@ function generateTable(sortCol=0) {
         table.deleteRow(table.rows.length - 1);
     }
 
+    // Generate rows
     let rowArray = []
     permSets(set => {
         for (const stat in min_values) {
@@ -160,16 +162,25 @@ function generateTable(sortCol=0) {
             }
         }
         rowArray.push(set.generateRow())
-        
     })
 
+    // TODO: Get sort direction and adjust UI
+
+    // Sort rows
     rowArray.sort((rowA, rowB) => {
-        const a = rowA.cells[sortCol].innerText
-        const b = rowB.cells[sortCol].innerText
-        return a < b ? -1 : a > b ? 1 : 0
+        const a = tryParseInt(rowA.cells[sortCol].innerText)
+        const b = tryParseInt(rowB.cells[sortCol].innerText)
+        // TODO, add a reverse for ascending
+        return a > b ? -1 : a < b ? 1 : 0
     })
 
+    // Add rows to results table
     rowArray.forEach(row => table.appendChild(row))
+}
+
+function tryParseInt(v) {
+  const i = parseInt(v)
+  return i === NaN ? i : v
 }
 
 // Run main
