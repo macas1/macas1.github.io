@@ -46,9 +46,9 @@ function main() {
 
 function create_results_headers() {
     const row = document.createElement("tr")
-    for (const value in constants["TableHeaders"]) {
+    for (const index in constants["TableHeaders"]) {
         let cell = document.createElement("th")
-        cell.innerText = value
+        cell.innerText = constants["TableHeaders"][index]
         row.appendChild(cell)
     }
     document.getElementById("resultsTable").appendChild(row)
@@ -112,7 +112,7 @@ function permSets(withEachSet) {
 }
 
 // Interactive
-function generateTable() {
+export function generateTable() {
     const table = document.getElementById("resultsTable")
 
     // TODO: link these with constants: VALUE, ID
