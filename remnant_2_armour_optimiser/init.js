@@ -14,14 +14,14 @@ class ArmourSet {
 
     getValue(value_name) {
         switch(value_name) {
-            case "Body": body["Name"]
+            case "Body": this.body["Name"]
                 return 
             case "Hands":
-                return hands["Name"]
+                return this.hands["Name"]
             case "Head":
-                return head["Name"]
+                return this.head["Name"]
             case "Legs":
-                return legs["Name"]
+                return this.legs["Name"]
             default:
                 return this.body[value_name] + this.hands[value_name] + this.head[value_name] + this.legs[value_name]
         }
